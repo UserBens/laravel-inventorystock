@@ -99,8 +99,8 @@
                                                         <td>{{ $item->tanggal }}</td>
                                                         <td>{{ $item->in }}</td>
                                                         <td>{{ $item->out }}</td>
-                                                        <td>{{ ($item->produk->harga_jual * $item->in) - ($item->produk->harga_jual * $item->out) }}</td>
-                                                        {{-- <td>{{ $item->saldo }}</td> --}}
+                                                        {{-- <td>{{ ($item->produk->harga_jual * $item->in) - ($item->produk->harga_jual * $item->out) }}</td> --}}
+                                                        <td>{{ $item->saldo }}</td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>

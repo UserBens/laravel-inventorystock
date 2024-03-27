@@ -72,7 +72,7 @@ class PembelianProdukController extends Controller
         $total_penjualan = Penjualan::where('produk_id', $request->produk_id)->sum('total');
 
         // Hitung total saldo dari pembelian dan penjualan
-        $total_saldo = $total_pembelian + $total_penjualan;
+        $total_saldo = $total_pembelian - $total_penjualan;
 
         // Simpan total saldo ke dalam kolom saldo
         $stock->saldo = $total_saldo;
